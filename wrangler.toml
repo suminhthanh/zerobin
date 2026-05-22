@@ -1,0 +1,70 @@
+name = "zerobin"
+main = "src/index.ts"
+compatibility_date = "2024-12-01"
+compatibility_flags = ["nodejs_compat"]
+# account_id = "your-account-id-here"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "zerobin"
+database_id = ""
+migrations_dir = "migrations"
+
+[[r2_buckets]]
+binding = "BUCKET"
+bucket_name = "zerobin-pastes"
+
+[durable_objects]
+bindings = [
+  { name = "RATE_LIMITER", class_name = "RateLimiter" }
+]
+
+[[migrations]]
+tag = "v1"
+new_classes = ["RateLimiter"]
+
+[triggers]
+crons = ["*/5 * * * *"]
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+html_handling = "none"
+not_found_handling = "none"
+
+[vars]
+SITE_NAME = "ZeroBin"
+DISCUSSION = "true"
+OPEN_DISCUSSION = "false"
+PASSWORD = "true"
+FILE_UPLOAD = "false"
+BURN_AFTER_READING_SELECTED = "false"
+DEFAULT_FORMATTER = "plaintext"
+# SYNTAX_THEME = ""
+PASTE_SIZE_LIMIT = "10000000"
+TEMPLATE = "bootstrap5"
+# INFO_TEXT = ""
+# NOTICE_TEXT = ""
+LANGUAGE_SELECTION = "false"
+LANGUAGE_DEFAULT = "en"
+# URL_SHORTENER = ""
+SHORTEN_BY_DEFAULT = "false"
+QR_CODE = "false"
+EMAIL_SHARING = "false"
+ICON_TYPE = "jdenticon"
+HTTP_WARNING = "true"
+COMPRESSION = "zlib"
+EXPIRE_DEFAULT = "1week"
+TRAFFIC_LIMIT = "10"
+# TRAFFIC_EXEMPTED = ""
+# TRAFFIC_CREATORS = ""
+# TRAFFIC_HEADER = ""
+PURGE_LIMIT = "300"
+PURGE_BATCH_SIZE = "10"
+
+[env.preview]
+name = "zerobin-preview"
+workers_dev = true
+
+[env.production]
+name = "zerobin"

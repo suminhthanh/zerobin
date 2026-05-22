@@ -1,0 +1,25 @@
+{
+  "$schema": "https://workers.cloudflare.com/schemas/deploy.json",
+  "name": "zerobin",
+  "description": "Zero-knowledge encrypted pastebin. AES-256-GCM encryption in the browser — the server never sees your content.",
+  "deploy": {
+    "workers": [
+      {
+        "src": ".",
+        "name": "zerobin",
+        "build": "npm run build",
+        "d1_databases": [
+          { "binding": "DB", "name": "zerobin" }
+        ],
+        "r2_buckets": [
+          { "binding": "BUCKET", "name": "zerobin-pastes" }
+        ],
+        "durable_objects": {
+          "bindings": [
+            { "name": "RATE_LIMITER", "class_name": "RateLimiter" }
+          ]
+        }
+      }
+    ]
+  }
+}

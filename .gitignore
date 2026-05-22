@@ -1,0 +1,21 @@
+node_modules/
+.wrangler/
+dist/
+.dev.vars
+.env
+*.log
+
+# Build output (regenerated from frontend/)
+public/assets/
+public/index.html
+
+# Backup files
+wrangler.toml.bak
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

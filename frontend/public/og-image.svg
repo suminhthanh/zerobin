@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0a0a0f"/>
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00f0ff;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#a855f7;stop-opacity:0.15"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grad)"/>
+
+  <!-- Center-aligned content block -->
+  <rect x="510" y="160" width="80" height="80" rx="16" fill="#12121a" stroke="#00f0ff" stroke-width="2"/>
+  <text x="550" y="214" font-family="system-ui, sans-serif" font-size="44" font-weight="bold" fill="#00f0ff" text-anchor="middle">Z</text>
+
+  <text x="600" y="300" font-family="system-ui, sans-serif" font-size="52" font-weight="bold" fill="#e2e8f0" text-anchor="middle">ZeroBin</text>
+  <text x="600" y="355" font-family="system-ui, sans-serif" font-size="24" fill="#64748b" text-anchor="middle">Zero-knowledge encrypted pastebin</text>
+  <text x="600" y="395" font-family="system-ui, sans-serif" font-size="20" fill="#64748b" text-anchor="middle">Your data, your keys, your privacy.</text>
+
+  <!-- Tags centered -->
+  <g text-anchor="middle">
+    <rect x="310" y="435" width="160" height="34" rx="6" fill="none" stroke="#1e1e2e" stroke-width="1"/>
+    <text x="390" y="457" font-family="monospace" font-size="13" fill="#00f0ff">AES-256-GCM</text>
+
+    <rect x="500" y="435" width="160" height="34" rx="6" fill="none" stroke="#1e1e2e" stroke-width="1"/>
+    <text x="580" y="457" font-family="monospace" font-size="13" fill="#a855f7">End-to-End</text>
+
+    <rect x="690" y="435" width="180" height="34" rx="6" fill="none" stroke="#1e1e2e" stroke-width="1"/>
+    <text x="780" y="457" font-family="monospace" font-size="13" fill="#22c55e">Zero Knowledge</text>
+  </g>
+</svg>

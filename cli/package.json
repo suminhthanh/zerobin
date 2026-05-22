@@ -1,0 +1,34 @@
+{
+  "name": "zerobin-cli",
+  "version": "1.0.0",
+  "description": "Zero-knowledge encrypted pastebin CLI — create, read, and delete pastes from the terminal",
+  "type": "module",
+  "bin": {
+    "zerobin": "./dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "pastebin",
+    "encryption",
+    "zero-knowledge",
+    "privatebin",
+    "cli"
+  ],
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0",
+    "vitest": "^4.1.0"
+  }
+}

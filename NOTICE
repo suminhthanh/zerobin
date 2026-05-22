@@ -1,0 +1,21 @@
+ZeroBin
+Copyright 2026 suminhthanh and ZeroBin contributors
+
+This product is inspired by PrivateBin (https://privatebin.info/),
+an open-source zero-knowledge pastebin licensed under the zlib/libpng license.
+
+ZeroBin is a clean-room reimplementation. The backend API is written from
+scratch in TypeScript for Cloudflare Workers. The frontend is built from
+scratch using Svelte and Tailwind CSS. No code from PrivateBin was copied
+or modified — only the encryption protocol specification (AES-256-GCM with
+PBKDF2 key derivation) was reimplemented for API compatibility.
+
+The encryption protocol used by ZeroBin is based on the PrivateBin v2
+format specification, which defines:
+- AES-256-GCM symmetric encryption
+- PBKDF2-SHA256 key derivation (100,000 iterations)
+- Base58 key encoding in URL fragments
+- zlib compression of plaintext before encryption
+
+Third-party dependencies are listed in package.json files and are subject
+to their own licenses.
